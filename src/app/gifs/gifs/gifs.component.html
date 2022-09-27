@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-group">
+    <h3>Busca tu Gif</h3>
+    <input type="text" class="form-control w-50" #txtBusqueda (keyup.enter)="search()">
+  </div>
+
+  <div class="row my-5">
+    <div class="col-md-4" *ngFor="let data of busquedaResults">
+      <div class="card">
+        <img [src]="data.media_formats.gif.url" [alt]="">
+      </div>
+    </div>
+  </div>
+</div>
